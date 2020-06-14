@@ -25,6 +25,8 @@ static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
        [SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor  },
+       [SchemeTitle]  = { selbordercolor, normbgcolor, selbordercolor },
+
 };
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
@@ -110,6 +112,7 @@ static Key keys[] = {
 //	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,             		XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },
+	{ MODKEY,                       XK_f,      spawn,          SHCMD("tpicom compton") },
 	{ MODKEY,			XK_t,	   setlayout,	   {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,		XK_t,  	   setlayout,	   {.v = &layouts[1]} },
 	{ MODKEY,			XK_y,	   setlayout,	   {.v = &layouts[2]} },
