@@ -19,8 +19,8 @@ static char normbgcolor[]           = "#222222";
 static char normbordercolor[]       = "#444444";
 static char normfgcolor[]           = "#eeeeee";
 static char selfgcolor[]            = "#eeeeee";
-static char selbordercolor[]        = "#bd93f9"; //selected window
-static char selbgcolor[]            = "#bd93f9"; //selected tag
+static char selbordercolor[]        = "#BD93F9"; //selected window
+static char selbgcolor[]            = "#BD93F9"; //selected tag
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,	    0,		     0,           -1 },
 	{ "feh",      NULL,       NULL,       0,            1,		     1,              0,        1050,600,1050,600,        5 },
 	{ NULL,      NULL, "Friends List",       0,            1,  	     1,              0,        300,600,300,600,        5 },
+	{ NULL,      NULL, "MLB_loop.gif - mpv",       0,            1,  	     1,              0,        900,900,900,900,        5 },
 };
 
 /* layout(s) */
@@ -103,6 +104,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_m,	   spawn,	   SHCMD("st -e ncmpcpp") },
 	{ MODKEY|ShiftMask,   		XK_Return, spawn,          SHCMD("samedir") },
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("doppler") },
 	{ MODKEY,             		XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,			XK_o,	   incnmaster,     {.i = +1 } },
@@ -172,4 +174,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
 
 };
-
