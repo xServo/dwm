@@ -138,6 +138,11 @@ static Key keys[] = {
 	{ MODKEY, XK_minus, 	spawn,			   SHCMD("vol_down") },
 	{ MODKEY, XK_equal, 	spawn,			   SHCMD("vol_up") },
 	{ 0, XF86XK_AudioMute, 	spawn,			   SHCMD("vol_mute") },
+	{ 0, XF86XK_MonBrightnessUp,	spawn,			   SHCMD("xbacklight -inc 10; killbar") },
+	{ 0, XF86XK_MonBrightnessDown,	spawn,			   SHCMD("xbacklight -dec 10; killbar") },
+	{ 0, XF86XK_AudioLowerVolume, 	spawn,			   SHCMD("vol_down") },
+	{ 0, XF86XK_AudioRaiseVolume, 	spawn,			   SHCMD("vol_up") },
+
         // GAPS
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
